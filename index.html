@@ -4,13 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal WebPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #a8dadc;
+            background-color: #e8e9eb;
+            display: grid;
+            place-items: center;
         }
 
         .first {
-            width: 450px;
+            width: 300px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .second {
+            width: 300px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .contact {
+            text-align: center;
+        }
+        h2.contact {
+            width: 200px;
+            margin: 40px 10px 0 50px;
+        }
+        h1 {
+            font-family: 'Handjet', cursive;
+            margin: 22px 22px;
+        }
+        h2 {
+            font-family: 'Handjet', cursive;
+            margin: 22px 22px;
+            color: #ffffff;
+        }
+        p {font-family: 'Handjet', cursive;
+           font-family: 'Josefin Sans', sans-serif;
+           font-size: 22px;
+           color: #ffffff;
+        }
+        li {font-family: 'Handjet', cursive;
+           font-family: 'Josefin Sans', sans-serif;
+           font-size: 22px;
+           color: #ffffff;
+        }
+        a:link {
+            color: rgb(255, 255, 255);
+        }
+        a:visited {
+            color: rgb(255, 255, 255);
+        }
+        a:hover {
+            color: rgb(183, 0, 255);
+        }
+        a:link {
+            text-decoration: none;
         }
         button {
                 padding: 17px 75px;
@@ -27,7 +84,7 @@
 
                 button:hover {
                 letter-spacing: 3px;
-                background-color: hsl(261deg 80% 48%);
+                background-color: hsl(286, 100%, 50%);
                 color: hsl(0, 0%, 100%);
                 box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
                 }
@@ -41,65 +98,65 @@
                 transition: 100ms;
                 }
                 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  position: relative;
-  color: rgb(0, 0, 0);
-  margin: 50px;
-}
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                position: relative;
+                color: rgb(0, 0, 0);
+                margin: 50px;
+                }
 
-.container .label {
-  font-size: 15px;
-  padding-left: 10px;
-  position: absolute;
-  top: 13px;
-  transition: 0.3s;
-  pointer-events: none;
-}
+                .container .label {
+                font-size: 15px;
+                padding-left: 10px;
+                position: absolute;
+                top: 13px;
+                transition: 0.3s;
+                pointer-events: none;
+                }
 
-.input {
-  width: 200px;
-  height: 45px;
-  border: none;
-  outline: none;
-  padding: 0px 7px;
-  border-radius: 6px;
-  color: #070000;
-  font-size: 15px;
-  background-color: rgb(220, 237, 245);
-  box-shadow: 3px 3px 10px rgba(0,0,0,1),
-  -1px -1px 6px rgba(255, 255, 255, 0.4);
-}
+                .input {
+                width: 200px;
+                height: 45px;
+                border: none;
+                outline: none;
+                padding: 0px 7px;
+                border-radius: 6px;
+                color: #070000;
+                font-size: 15px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
 
-.input:focus {
-  border: 2px solid transparent;
-  color: #fff;
-  box-shadow: 3px 3px 10px rgba(0,0,0,1),
-  -1px -1px 6px rgba(255, 255, 255, 0.4),
-  inset 3px 3px 10px rgba(0,0,0,1),
-  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
-}
+                .input:focus {
+                border: 2px solid transparent;
+                color: #000000;
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4),
+                inset 3px 3px 10px rgba(0,0,0,1),
+                inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
 
-.container .input:valid ~ .label,
-.container .input:focus ~ .label {
-  transition: 0.3s;
-  padding-left: 2px;
-  transform: translateY(-35px);
-}
+                .container .input:valid ~ .label,
+                .container .input:focus ~ .label {
+                transition: 0.3s;
+                padding-left: 2px;
+                transform: translateY(-35px);
+                }
 
-.container .input:valid,
-.container .input:focus {
-  box-shadow: 3px 3px 10px rgba(0,0,0,1),
-  -1px -1px 6px rgba(255, 255, 255, 0.4),
-  inset 3px 3px 10px rgba(0,0,0,1),
-  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
-}
+                .container .input:valid,
+                .container .input:focus {
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4),
+                inset 3px 3px 10px rgba(0,0,0,1),
+                inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
     </style>
 </head>
 <body>
     <main>
-        <div class="swing-top-fwd">
+        <div class="text-focus-in">
             <h1>Welcome to Maksym's page</h1>
         </div>
         <div class="first">
@@ -107,17 +164,17 @@
             <p>Hi, I'm Max. I'm from Ukraine. Right now I'm living in Berlin. I learn Python and I want to become a good specialist. In free time I like reading, traveling, to go jogging or cycling.</p>
         </div>
 
-        <div class="second">
+        <div class="first">
             <h2>My favorite websites</h2>
             <ul>
-                <li>github.com</li>
-                <li>chat.openai.com</li>
-                <li>amazon.com</li>
-                <li>google.com</li>
+                <li><a href="https://www.github.com">github.com</a></li>
+                <li><a href="https://chat.openai.com/auth/login">chat.openai.com</a></li>
+                <li><a href="https://www.amazon.com">amazon.com</a></li>
+                <li><a href="https://www.google.com">google.com</a></li>
             </ul>
         </div>
 
-        <div class="second">
+        <div class="first">
             <h2>My favorite destinations</h2>
             <ul>
                 <li>Scandinavia</li>
@@ -127,8 +184,8 @@
             </ul>
         </div>
 
-        <div>
-            <h2>Contact me</h2>
+        <div class="second">
+            <h2 class="contact">Contact me</h2>
             <form action="mailto:maksym.kharchenko@dci-student.org" method="get">
                 <div class="container">
                     <input type="text" name="name" required="" class="input">
@@ -138,7 +195,7 @@
                     <input type="text" name="e-mail" required="" class="input">
                     <label for="e-mail" class="label">E-Mail</label>
                 </div>
-                <div class="container">
+                <div class="container input3">
                     <input type="text" name="text" required="" class="input">
                     <label for="text" class="label">Your Text</label>
                 </div>
