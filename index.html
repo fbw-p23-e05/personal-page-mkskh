@@ -5,51 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal WebPage</title>
     <style>
+        body {
+            background-color: #a8dadc;
+        }
+
         .first {
             width: 450px;
         }
+        button {
+                padding: 17px 75px;
+                margin: 0 0 40px 50px;
+                border-radius: 50px;
+                border: 0;
+                background-color: white;
+                box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                font-size: 15px;
+                transition: all .5s ease;
+                }
+
+                button:hover {
+                letter-spacing: 3px;
+                background-color: hsl(261deg 80% 48%);
+                color: hsl(0, 0%, 100%);
+                box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+                }
+
+                button:active {
+                letter-spacing: 3px;
+                background-color: hsl(261deg 80% 48%);
+                color: hsl(0, 0%, 100%);
+                box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+                transform: translateY(10px);
+                transition: 100ms;
+                }
+                .container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: rgb(0, 0, 0);
+  margin: 50px;
+}
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 200px;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #070000;
+  font-size: 15px;
+  background-color: rgb(220, 237, 245);
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
     </style>
 </head>
 <body>
-    <h1>Welcome to Maksym's page</h1>
-    
-    <section class="first">
-        <h2>About me</h2>
-        <p>Hi, I'm Max. I'm from Ukraine. Right now I'm living in Berlin. I learn Python and I want to become a good specialist. In free time I like reading, traveling, to go jogging or cycling.</p>
-    </section>
+    <main>
+        <div class="swing-top-fwd">
+            <h1>Welcome to Maksym's page</h1>
+        </div>
+        <div class="first">
+            <h2>About me</h2>
+            <p>Hi, I'm Max. I'm from Ukraine. Right now I'm living in Berlin. I learn Python and I want to become a good specialist. In free time I like reading, traveling, to go jogging or cycling.</p>
+        </div>
 
-    <section class="second">
-        <h2>My favorite websites</h2>
-        <ul>
-            <li>github.com</li>
-            <li>chat.openai.com</li>
-            <li>amazon.com</li>
-            <li>google.com</li>
-        </ul>
-    </section>
+        <div class="second">
+            <h2>My favorite websites</h2>
+            <ul>
+                <li>github.com</li>
+                <li>chat.openai.com</li>
+                <li>amazon.com</li>
+                <li>google.com</li>
+            </ul>
+        </div>
 
-    <section class="second">
-        <h2>My favorite destinations</h2>
-        <ul>
-            <li>Scandinavia</li>
-            <li>North America</li>
-            <li>Great Britain</li>
-            <li>East Asia</li>
-        </ul>
-    </section>
+        <div class="second">
+            <h2>My favorite destinations</h2>
+            <ul>
+                <li>Scandinavia</li>
+                <li>North America</li>
+                <li>Great Britain</li>
+                <li>East Asia</li>
+            </ul>
+        </div>
 
-    <section>
-        <h2>Contact me</h2>
-        <form action="mailto:maksym.kharchenko@dci-student.org" method="get">
-            <input type="text" name="name" placeholder="Name">
-            <br>
-            <input type="text" name="e-mail" placeholder="E-Mail">
-            <br>
-            <input type="text" name="text" placeholder="Your Text">
-            <br>
-            <button>Submit</button>
-        </form>
-    </section>
-
+        <div>
+            <h2>Contact me</h2>
+            <form action="mailto:maksym.kharchenko@dci-student.org" method="get">
+                <div class="container">
+                    <input type="text" name="name" required="" class="input">
+                    <label for="name" class="label">Name</label>
+                </div>
+                <div class="container">
+                    <input type="text" name="e-mail" required="" class="input">
+                    <label for="e-mail" class="label">E-Mail</label>
+                </div>
+                <div class="container">
+                    <input type="text" name="text" required="" class="input">
+                    <label for="text" class="label">Your Text</label>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
