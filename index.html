@@ -152,6 +152,44 @@
                 inset 3px 3px 10px rgba(0,0,0,1),
                 inset -1px -1px 6px rgba(255, 255, 255, 0.4);
                 }
+
+                .input2 {
+                width: 200px;
+                height: 200px;
+                border: none;
+                outline: none;
+                padding: 0px 7px;
+                border-radius: 6px;
+                color: #070000;
+                font-size: 15px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
+
+                .input2:focus {
+                border: 2px solid transparent;
+                color: #000000;
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4),
+                inset 3px 3px 10px rgba(0,0,0,1),
+                inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
+
+                .container .input2:valid ~ .label,
+                .container .input2:focus ~ .label {
+                transition: 0.3s;
+                padding-left: 2px;
+                transform: translateY(-35px);
+                }
+
+                .container .input2:valid,
+                .container .input2:focus {
+                box-shadow: 3px 3px 10px rgba(0,0,0,1),
+                -1px -1px 6px rgba(255, 255, 255, 0.4),
+                inset 3px 3px 10px rgba(0,0,0,1),
+                inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+                }
     </style>
 </head>
 <body>
@@ -195,8 +233,8 @@
                     <input type="text" name="e-mail" required="" class="input">
                     <label for="e-mail" class="label">E-Mail</label>
                 </div>
-                <div class="container input3">
-                    <input type="text" name="text" required="" class="input">
+                <div class="container">
+                    <input type="text" name="text" required="" class="input2">
                     <label for="text" class="label">Your Text</label>
                 </div>
                 <button>Submit</button>
