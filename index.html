@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal WebPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet&family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8e9eb;
+            display: grid;
+            place-items: center;
+        }
+
+        .first {
+            width: 300px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .second {
+            width: 300px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .contact {
+            text-align: center;
+        }
+        h2.contact {
+            width: 200px;
+            margin: 15px 10px 0 50px;
+        }
+        h1 {
+            font-family: 'Handjet', cursive;
+            margin: 22px 15px;
+            font-size: 34px;
+        }
+        h2 {
+            font-family: 'Handjet', cursive;
+            margin: 22px 22px;
+            color: #ffffff;
+        }
+        p {font-family: 'Handjet', cursive;
+           font-family: 'Josefin Sans', sans-serif;
+           font-size: 22px;
+           color: #ffffff;
+           padding: 0 12px;
+        }
+        li {font-family: 'Handjet', cursive;
+           font-family: 'Josefin Sans', sans-serif;
+           font-size: 22px;
+           color: #ffffff;
+        }
+        a:link {
+            color: rgb(255, 255, 255);
+        }
+        a:visited {
+            color: rgb(255, 255, 255);
+        }
+        a:hover {
+            color: rgb(183, 0, 255);
+        }
+        a:link {
+            text-decoration: none;
+        }
+        button {
+            padding: 17px 75px;
+            margin: 0 0 15px 50px;
+            border-radius: 50px;
+            border: 0;
+            background-color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all .5s ease;
+        }
+        button:hover {
+            letter-spacing: 3px;
+            background-color: hsl(286, 100%, 50%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+        }
+        button:active {
+            letter-spacing: 3px;
+            background-color: hsl(261deg 80% 48%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            position: relative;
+            color: rgb(0, 0, 0);
+            margin: 20px 20px 20px 52px;;
+        }
+
+        .container .label {
+            font-size: 15px;
+            padding-left: 10px;
+            position: absolute;
+            top: 13px;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+
+        .input {
+            width: 200px;
+            height: 45px;
+            border: none;
+            outline: none;
+            padding: 0px 7px;
+            border-radius: 6px;
+            color: #070000;
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .input:focus {
+            border: 2px solid transparent;
+            color: #000000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4),
+            inset 3px 3px 10px rgba(0,0,0,1),
+            inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .container .input:valid ~ .label,
+        .container .input:focus ~ .label {
+            transition: 0.3s;
+            padding-left: 2px;
+            transform: translateY(-35px);
+        }
+
+        .container .input:valid,
+        .container .input:focus {
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4),
+            inset 3px 3px 10px rgba(0,0,0,1),
+            inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .input2 {
+            width: 200px;
+            height: 200px;
+            border: none;
+            outline: none;
+            padding: 0px 7px;
+            border-radius: 6px;
+            color: #070000;
+            font-size: 15px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .input2:focus {
+            border: 2px solid transparent;
+            color: #000000;
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4),
+            inset 3px 3px 10px rgba(0,0,0,1),
+            inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        .container .input2:valid ~ .label,
+        .container .input2:focus ~ .label {
+            transition: 0.3s;
+            padding-left: 2px;
+            transform: translateY(-35px);
+        }
+
+        .container .input2:valid,
+        .container .input2:focus {
+            box-shadow: 3px 3px 10px rgba(0,0,0,1),
+            -1px -1px 6px rgba(255, 255, 255, 0.4),
+            inset 3px 3px 10px rgba(0,0,0,1),
+            inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+        }
+            
+    </style>
+</head>
+<body>
+    <main>
+        <div class="text-focus-in">
+            <h1>Welcome to Maksym's page</h1>
+        </div>
+        <div class="first">
+            <h2>About me</h2>
+            <p>Hi, I'm Max. I'm from Ukraine. Right now I'm living in Berlin. I learn Python and I want to become a good specialist. In free time I like reading, traveling, to go jogging or cycling.</p>
+        </div>
+
+        <div class="first">
+            <h2>My favorite websites</h2>
+            <ul>
+                <li><a href="https://www.github.com">github.com</a></li>
+                <li><a href="https://chat.openai.com/auth/login">chat.openai.com</a></li>
+                <li><a href="https://www.amazon.com">amazon.com</a></li>
+                <li><a href="https://www.google.com">google.com</a></li>
+            </ul>
+        </div>
+
+        <div class="first">
+            <h2>My favorite destinations</h2>
+            <ul>
+                <li>Scandinavia</li>
+                <li>North America</li>
+                <li>Great Britain</li>
+                <li>East Asia</li>
+            </ul>
+        </div>
+
+        <div class="second">
+            <h2 class="contact">Contact me</h2>
+            <form action="mailto:maksym.kharchenko@dci-student.org" method="get">
+                <div class="container">
+                    <input type="text" name="name" required="" class="input">
+                    <label for="name" class="label">Name</label>
+                </div>
+                <div class="container">
+                    <input type="text" name="e-mail" required="" class="input">
+                    <label for="e-mail" class="label">E-Mail</label>
+                </div>
+                <div class="container">
+                    <input type="text" name="text" required="" class="input2">
+                    <label for="text" class="label">Your Text</label>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div class="second">
+            <h2>Simple task for you</h2>
+            <p>If you like JS and math write your answer below.</p>
+            <p><b>How much will be 3+6*4?</b></p>
+                <div class="container">
+                    <input type="number" 
+                    name="answer" 
+                    id="answer" 
+                    class="input" 
+                    placeholder="Your answer"/>
+                </div>
+                <button id="but">Check!</button>       
+    </main>
+    <script>
+        const button = document.getElementById('but');
+        const input = document.getElementById('answer');
+
+        function handleAnswer() {
+            const answer = input.value;
+
+            if (answer == 27) {
+                alert('This is the correct answer!');
+                document.body.style.background = 'green';
+            } else {
+                alert('This answer is incorrect! Try again!');
+                document.body.style.background = 'red';
+            }
+        }
+
+        but.addEventListener('click', handleAnswer);
+
+    </script>
+</body>
+</html>
