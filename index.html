@@ -45,7 +45,7 @@
         }
         h2 {
             font-family: 'Handjet', cursive;
-            margin: 22px 20px;
+            margin: 22px 22px;
             color: #ffffff;
         }
         p {font-family: 'Handjet', cursive;
@@ -241,6 +241,38 @@
                 <button>Submit</button>
             </form>
         </div>
+
+        <div class="second">
+            <h2>Simple task for you</h2>
+            <p>If you like JS and math write your answer below.</p>
+            <p><b>How much will be 3+6*4?</b></p>
+                <div class="container">
+                    <input type="number" 
+                    name="answer" 
+                    id="answer" 
+                    class="input" 
+                    placeholder="Your answer"/>
+                </div>
+                <button id="but">Check!</button>       
     </main>
+    <script>
+        const button = document.getElementById('but');
+        const input = document.getElementById('answer');
+
+        function handleAnswer() {
+            const answer = input.value;
+
+            if (answer == 27) {
+                alert('This is the correct answer!');
+                document.body.style.background = 'green';
+            } else {
+                alert('This answer is incorrect! Try again!');
+                document.body.style.background = 'red';
+            }
+        }
+
+        but.addEventListener('click', handleAnswer);
+
+    </script>
 </body>
 </html>
